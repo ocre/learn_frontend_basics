@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+    <title>test videos</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <style>
+    .content {
+        width: 100%;
+    }
+    .content video {
+        max-width: 100% !important;
+    }   
+    @media screen and (max-width: 991px) {
+        .content video {
+            height: auto !important;
+        }
+    }
+    @media screen and (max-width: 575px) {
+
+    }
+    </style>
+</head>
+
+<body>
+<div class="main">
+    <div class="content">
+        <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+	    <div class="video-box" style="width: 100%;height: 100%; margin: 20px auto;">
+    		<video src="https://www.w3school.com.cn/i/movie.ogg" controls="controls" class="video-js vjs-default-skin">
+    			抱歉！您的浏览器不支持video标签。
+        	</video>
+    	</div>
+        <div class="video-box" style="width: 100%;height: 100%; margin: 20px auto;">
+    		<video src="https://www.w3school.com.cn/i/movie.mp4" controls="controls" class="video-js vjs-default-skin">
+    		抱歉！您的浏览器不支持video标签。
+        	</video>
+    	</div>
+    </div>
+</div>
+
+<script>
+// 取消所有视频的preload="none"属性，以便于能够展示视频封面
+var videos = document.getElementsByTagName('video');
+for (var i = 0; i < videos.length; i++) {
+    videos[i].preload = 'auto';
+}
+</script>
+</body>
+</html>
